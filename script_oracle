@@ -1,0 +1,21 @@
+Scripts indispensables para oracle:
+
+
+Buscar una tabla en las tablas del usuario en uso
+
+                  SELECT table_name
+                  FROM user_tables
+                  WHERE table_name LIKE '%PATRON%';
+
+
+En las tablas accesibles por el usuario actual:
+
+                    SELECT table_name
+                    FROM all_tables
+                    WHERE table_name LIKE '%PATRON%';
+
+Buscar como dba:
+
+                        SELECT table_name, owner
+                        FROM dba_tables
+                        WHERE table_name LIKE '%PATRON%';
